@@ -3,7 +3,6 @@ from pymongo import MongoClient
 from bson.json_util import dumps
 import pyarabic.araby as araby
 from dotenv import dotenv_values
-import os
 
 
 # Env variables (passwords)
@@ -18,7 +17,7 @@ dictionary = db.dictionary
 
 @app.route("/", methods=["GET"])
 def index():
-    return dumps("search_result")
+    return "search_result"
 
 
 @app.route("/arabic/<kalam>", methods=["GET"])
